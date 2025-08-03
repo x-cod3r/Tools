@@ -1,0 +1,54 @@
+2025-08-03 18:44:25,278 - ERROR - Error retrieving restore points: winmgmts:.SystemRestore
+2025-08-03 18:44:25,286 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\wmi.py", line 1145, in __getattr__
+    return self._cached_classes (attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\wmi.py", line 1156, in _cached_classes
+    self._classes_map[class_name] = _wmi_class (self, self._namespace.Get (class_name))
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<COMObject winmgmts:>", line 2, in Get
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32com\client\dynamic.py", line 355, in _ApplyTypes_
+    result = self._oleobj_.InvokeTypes(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+pywintypes.com_error: (-2147352567, 'Exception occurred.', (0, 'SWbemServicesEx', 'Not found ', None, 0, -2147217406), None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\development\Python\Tools\SysRestore.py", line 84, in _load_restore_points
+    for rp in self.c.SystemRestore().Instances():
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\wmi.py", line 1147, in __getattr__
+    return getattr (self._namespace, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32com\client\dynamic.py", line 629, in __getattr__
+    raise AttributeError(f"{self._username_}.{attr}")
+AttributeError: winmgmts:.SystemRestore
+
+2025-08-03 18:46:34,145 - ERROR - Error retrieving restore points: winmgmts:.SystemRestore
+2025-08-03 18:46:34,150 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\wmi.py", line 1145, in __getattr__
+    return self._cached_classes (attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\wmi.py", line 1156, in _cached_classes
+    self._classes_map[class_name] = _wmi_class (self, self._namespace.Get (class_name))
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<COMObject winmgmts:>", line 2, in Get
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32com\client\dynamic.py", line 355, in _ApplyTypes_
+    result = self._oleobj_.InvokeTypes(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+pywintypes.com_error: (-2147352567, 'Exception occurred.', (0, 'SWbemServicesEx', 'Not found ', None, 0, -2147217406), None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\development\Python\Tools\SysRestore.py", line 84, in _load_restore_points
+    for rp in self.c.SystemRestore().Instances():
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\wmi.py", line 1147, in __getattr__
+    return getattr (self._namespace, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drmah\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32com\client\dynamic.py", line 629, in __getattr__
+    raise AttributeError(f"{self._username_}.{attr}")
+AttributeError: winmgmts:.SystemRestore
+
