@@ -90,3 +90,39 @@ A PowerShell script designed to automate the download, extraction, and addition 
    (Choose 'Y' to confirm)
 
 **Note:** After running the FFmpeg installer, you may need to restart your terminal or VS Code for the PATH changes to take effect.
+
+### 4. Twitter Reply Deleter (`tweety_replies.py`)
+
+A Python script that automates the process of deleting your replies on Twitter (now X). It uses Selenium to log in to your account, navigate to your "Posts & replies" section, and iteratively delete replies based on a configurable limit.
+
+**Features:**
+- Automated login to Twitter/X.
+- Navigates to the user's "Posts & replies" page.
+- Iteratively finds and deletes replies.
+- Configurable limits for deletions per session and scroll attempts.
+- Handles various UI elements and potential errors during the deletion process.
+
+**Dependencies:**
+- `selenium`
+- `python-dotenv`
+
+**How to Run:**
+1. Ensure you have Python installed.
+2. Install the required libraries:
+   ```bash
+   pip install selenium python-dotenv
+   ```
+3. Download and install a compatible WebDriver for your browser (e.g., ChromeDriver for Google Chrome). Ensure the WebDriver executable is in your system's PATH or specify its location in the script.
+4. Create a `.env` file in the same directory as `tweety_replies.py` with your Twitter credentials:
+   ```
+   TWITTER_USERNAME="your_twitter_username"
+   TWITTER_PASSWORD="your_twitter_password"
+   TWITTER_PROFILE_NAME="your_twitter_profile_name"
+   # TWITTER_VERIFICATION_INPUT="your_verification_input_if_needed"
+   ```
+   Replace the placeholder values with your actual Twitter username, password, and profile name (e.g., `elonmusk` if your profile URL is `x.com/elonmusk`). The `TWITTER_VERIFICATION_INPUT` is optional and only needed if Twitter prompts for additional verification during login (e.g., email or phone number associated with the account).
+5. Run the script:
+   ```bash
+   python tweety_replies.py
+   ```
+</content>
